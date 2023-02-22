@@ -1,0 +1,46 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.personsdataapp'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+implementation 'org.postgresql:postgresql:42.3.3'
+	// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+implementation 'org.springframework:spring-webmvc:5.3.18'
+	// https://mvnrepository.com/artifact/org.springframework/spring-context
+implementation 'org.springframework:spring-context:5.3.18'
+	// https://mvnrepository.com/artifact/org.springframework/spring-core
+implementation 'org.springframework:spring-core:5.3.18'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+implementation 'org.hibernate:hibernate-entitymanager:5.6.7.Final'
+
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.6'
+
+// https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+implementation 'org.hibernate.orm:hibernate-core:5.6.7.Final'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web-services
+implementation 'org.springframework.boot:spring-boot-starter-web-services:2.6.6'
+// https://mvnrepository.com/artifact/org.hibernate.jpql/hibernate-jpql-parser
+implementation 'org.hibernate.jpql:hibernate-jpql-parser:1.0.0.Alpha1'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
+implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.7'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
